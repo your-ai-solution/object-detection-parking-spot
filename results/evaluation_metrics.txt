@@ -1,0 +1,7 @@
+Evaluation Metrics:
+Precision: 0.9978
+Recall: 0.9972
+mAP@0.5: 0.9941
+mAP@0.5:0.95: 0.9707
+
+Detailed evaluation results are saved in results

@@ -1,0 +1,16 @@
+
+name: object-detection-parking-spot
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - ultralytics>=8.3.0
+  - matplotlib
+  - opencv
+  - numpy
+  - pip
+  - pip:
+      - torch
+      - torchvision
+      - torchaudio
