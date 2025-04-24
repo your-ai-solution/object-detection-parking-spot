@@ -38,7 +38,7 @@ The dataset is PKLot, which contains 12,416 images of parking lots extracted fro
 
 The PKLot database is licensed under the Creative Commons Attribution 4.0 License. For more infomration, visit [the dataset summary on Roboflow](https://public.roboflow.com/object-detection/pklot).
 
-> Almeida, P., Oliveira, L. S., Silva Jr, E., Britto Jr, A., Koerich, A., PKLot – A robust dataset for parking lot classification, *Expert Systems with Applications*, 42(11):4937-4949, 2015.
+> Almeida, P., Oliveira, L. S., Silva Jr, E., Britto Jr, A., Koerich, A., PKLot – A robust dataset for parking lot classification, Expert Systems with Applications, 42(11):4937-4949, 2015.
 
 ## Methods
 
@@ -48,10 +48,10 @@ YOLO V8 is a powerful object detection model known for its speed and accuracy. I
 
 *Figure from [PRINCIPLES OF YOLO V8 by Muhammad Taha Ilyas](https://medium.com/@m.tahailyas786/principles-of-yolo-v8-3c605eab9bcc).*
 
-> Redmon, J., Divvala, S., Girshick, R., & Farhadi, A. (2016). *You Only Look Once: Unified, Real-Time Object Detection*. CVPR.  
+> Redmon, J., Divvala, S., Girshick, R., & Farhadi, A. (2016). You Only Look Once: Unified, Real-Time Object Detection. CVPR.  
   [Paper link](https://arxiv.org/abs/1506.02640)
 
-> Wang, C.-Y., Bochkovskiy, A., & Liao, H.-Y. M. (2021). *Scaled-YOLOv4: Scaling Cross Stage Partial Network*. CVPR.  
+> Wang, C.-Y., Bochkovskiy, A., & Liao, H.-Y. M. (2021). Scaled-YOLOv4: Scaling Cross Stage Partial Network. CVPR.  
   [Paper link](https://arxiv.org/abs/2011.08036)
 
 ## Results
