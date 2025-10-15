@@ -16,7 +16,7 @@ This applications focuses on object detection for parking spot availability usin
   - [Docker Setup (Optional)](#docker-setup-optional)
 - [Usage](#usage)
   - [Run Main Script](#run-main-script)
-  - [Run Each Source Script (Optional)](#run-each-source-script-optional)
+  - [Run Each Source Module (Optional)](#run-each-source-module-optional)
     - [Data Preparation](#data-preparation)
     - [Training](#training)
     - [Evaluation](#evaluation)
@@ -78,34 +78,35 @@ Additionally, the evaluation includes visualizations of precision-recall curves,
 
 ```
 object-detection-parking-spot/
-├── configs/                      # Pre-trained YOLO V8 weight files
-├── data/                         # Dataset
-│   ├── preprocessed/             # Preprocessed dataset with labels and images
-│   └── raw/                      # Raw downloaded ZIP file
-├── Dockerfile                    # Docker setup
-├── environment.yml               # Conda environment setup
-├── examples.png                  # Summary figures of example visualizations
-├── LICENSE                       # Project license
-├── main.py                       # Main pipeline script
-├── README.md                     # Project README
-├── requirements.txt              # Python dependencies
-├── results/                      # Outputs from inference and evaluation
-│   ├── evaluation/               # Evaluation-specific files
-│       ├── confusion_matrix.png  # Confusion matrix visualization
-│       ├── confusion_matrix_norm.png # Normalized confusion matrix
-│       ├── F1_curve.png          # F1 curve visualization
-│       ├── P_curve.png           # Precision-confidence curve
-│       ├── PR_curve.png          # Precision-Recall curve visualization
-│       └── R_curve.png           # Recall-confidence curve
-│   ├── evaluation_metrics.txt    # Evaluation metrics summary
-│   ├── ground_truth_*.png        # Ground truth visualizations
-│   └── predicted_detection_*.png # Model prediction visualizations
-├── src/                          # Source code
-│   ├── data.py                   # Data preparation script
-│   ├── eval.py                   # Evaluation script
-│   ├── infer.py                  # Inference script
-│   └── train.py                  # Training script
-└── yolov8.png                    # Illustration of YOLO V8
+├── configs/                              # Pre-trained YOLO V8 weight files
+├── data/                                 # Dataset
+│   ├── preprocessed/                     # Preprocessed dataset with labels and images
+│   └── raw/                              # Raw downloaded ZIP file
+├── Dockerfile                            # Docker setup
+├── environment.yml                       # Conda environment setup
+├── examples.png                          # Summary figures of example visualizations
+├── LICENSE                               # Project license
+├── main.py                               # Main pipeline script
+├── README.md                             # Project README
+├── requirements.txt                      # Python dependencies
+├── results/                              # Outputs from inference and evaluation
+│   ├── evaluation/                       # Evaluation-specific files
+│   │   ├── confusion_matrix.png          # Confusion matrix visualization
+│   │   ├── confusion_matrix_norm.png     # Normalized confusion matrix
+│   │   ├── F1_curve.png                  # F1 curve visualization
+│   │   ├── P_curve.png                   # Precision-confidence curve
+│   │   ├── PR_curve.png                  # Precision-Recall curve visualization
+│   │   └── R_curve.png                   # Recall-confidence curve
+│   ├── evaluation_metrics.txt            # Evaluation metrics summary
+│   ├── ground_truth_*.png                # Ground truth visualizations
+│   └── predicted_detection_*.png         # Model prediction visualizations
+├── src/                                  # Source code
+│   ├── __init__.py                       # Package marker
+│   ├── data.py                           # Data preparation script
+│   ├── eval.py                           # Evaluation script
+│   ├── infer.py                          # Inference script
+│   └── train.py                          # Training script
+└── yolov8.png                            # Illustration of YOLO V8
 ```
 
 ## Installation
@@ -152,24 +153,24 @@ object-detection-parking-spot/
    python main.py
    ```
 
-### Run Each Source Script (Optional)
+### Run Each Source Module (Optional)
 
 1. Data preparation: Preprocess the dataset.
    ```bash
-   python src/data.py
+   python -m src.data
    ```
 
 2. Training: Train a YOLO V8 model.
    ```bash
-   python src/train.py
+   python -m src.train
    ```
 
 3. Evaluation: Evaluate the YOLO V8 model.
    ```bash
-   python src/eval.py
+   python -m src.eval
    ```
 
 4. Inference: Run inference on random test images.
    ```bash
-   python src/infer.py
+   python -m src.infer
    ```
